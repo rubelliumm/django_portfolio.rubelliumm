@@ -213,7 +213,45 @@ div.navlink {
 .bismillah {
   margin-left: 33.33%;
 }
-.flag {
-  margin-left: 45%;
-  margin-top: 150px;
+.about ul li {
+  list-style: none;
+}
+li span {
+  margin-inline: 10px;
+}
+.service {
+  padding: 1rem;
+}
+.service:hover {
+  background: #303438;
+  font-weight: bold;
+}
+/* .service_container {
+  max-width: fit-content;
+} */
+.teams ul li{
+  list-style: none;
+  padding: 1rem;
+}
+.teams ul li:hover{
+  background-color: #18caca;
+}
+.groups{
+  max-width:200px;
+}
+.todo i{
+  float: right;
+  margin-inline: 10px;
+}
+.todo{
+  margin: 5px 0px;
+}
+.todo a {
+  color: white;
+}
+.todo a i:hover{
+  color:red;
+}
+ul.todoul{
+  list-style: auto;
 }
