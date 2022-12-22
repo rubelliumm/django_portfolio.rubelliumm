@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from main.models import aboutAdmin, adminService
 from main.forms import newUserForm
+from django.contrib.auth.forms import UserCreationForm
 
 
 def render_index_page(request):
@@ -47,13 +48,12 @@ def render_applist_page(request):
 
 
 def registration(request):
+    form = UserCreationForm()
     if request.method == 'POST':
-        form = newUserForm(request.POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect('')
-    form = newUserForm()
+            form.save()
+            return redirect('/')
     return render(request, 'main/registration.html', {'form': form})
 
 
